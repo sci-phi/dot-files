@@ -12,7 +12,7 @@ The automation approach I am using for a macOS system requires using [Homebrew](
 
 The `git` command is the natural choice here (but `gcc` or `clang` will also work) as getting this repo onto the target system requires git anyway.
 
-TODO: Document installation of Command Line Tools
+_**TODO: Document installation of Command Line Tools**_
 
 Once Git is installed, we can use it to pull down this repository __via the HTTP protocol__:
 
