@@ -10,6 +10,7 @@ brew "mise"
 brew "openssl@3"
 brew "pkgconf"
 brew "readline"
+brew "spaceship"
 brew "tree"
 cask "zed"
 

@@ -44,6 +44,9 @@ if [ -f "$TARGET" ]; then
     brew bundle --file=$TARGET
 fi
 
+source "$DOT_FILES_PATH/scripts/zshell.sh"
+prepare_zshell
+
 source "$DOT_FILES_PATH/scripts/rubyist.sh"
 prepare_rubyist
 
