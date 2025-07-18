@@ -12,3 +12,8 @@ brew "pkgconf"
 brew "readline"
 brew "tree"
 cask "zed"
+
+# Fonts
+# -----
+tap "homebrew/cask-fonts"
+cask "font-hack-nerd-font"
