@@ -1,17 +1,24 @@
 #!/bin/sh
 
-system_name=$(uname -s)
+# bootstrap : Use Homebrew to resolve any dependencies for target system
 
+set -e
+
+DOT_FILES_PATH=$(cd "$(dirname "$0")/.."; pwd)
+
+UNAME_HOST=$(uname -n)
+UNAME_SYSTEM=$(uname -s)
+
+# spew wrapper fn around echo to reduce inline "noise"
 function spew() {
     local message=$1
     local mode=${2:-"*"}
     local prefix="$mode$mode$mode"
-    local host_name=$(uname -n)
 
-    echo "$prefix | $host_name | $message"
+    echo "$prefix | $UNAME_HOST | $message"
 }
 
-if [ "$system_name" = "Darwin" ]; then
+if [ "$UNAME_SYSTEM" = "Darwin" ]; then
     # macOS
     spew "Darwin is macOS."
 else
@@ -29,7 +36,7 @@ else
     spew "Homebrew is available."
 fi
 
-TARGET="$(pwd)/Brewfile"
+TARGET="$DOT_FILES_PATH/Brewfile"
 spew "Target: $TARGET"
 
 if [ -f "$TARGET" ]; then
