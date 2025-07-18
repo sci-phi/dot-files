@@ -1,0 +1,5 @@
+brew "autojump"
+brew "bat"
+brew "direnv"
+brew "mas"
+brew "tree"
