@@ -62,6 +62,9 @@ prepare_zshell
 source "$DOT_FILES_PATH/scripts/rubyist.sh"
 prepare_rubyist
 
+source "$DOT_FILES_PATH/scripts/alchemist.sh"
+prepare_alchemist
+
 # ======================
 # . SCRIPT TERMINATION .
 spew "Bootstrap completed." "="
