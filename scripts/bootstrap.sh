@@ -9,14 +9,26 @@ DOT_FILES_PATH=$(cd "$(dirname "$0")/.."; pwd)
 UNAME_HOST=$(uname -n)
 UNAME_SYSTEM=$(uname -s)
 
+# ====================
+# FUNCTION DEFINITIONS
+# ====================
+
+function dts() {
+    date -u +"%Y%m%d-%H%M%S"
+}
+
 # spew wrapper fn around echo to reduce inline "noise"
 function spew() {
     local message=$1
     local mode=${2:-"*"}
     local prefix="$mode$mode$mode"
 
-    echo "$prefix | $UNAME_HOST | $message"
+    echo "$(dts) | $UNAME_HOST | $prefix | $message"
 }
+
+# ==================
+# ~ MAIN OPERATION ~
+# ==================
 
 if [ "$UNAME_SYSTEM" = "Darwin" ]; then
     # macOS
@@ -50,6 +62,6 @@ prepare_zshell
 source "$DOT_FILES_PATH/scripts/rubyist.sh"
 prepare_rubyist
 
-# ===============
-# FULL COMPLETION
+# ======================
+# . SCRIPT TERMINATION .
 spew "Bootstrap completed." "="
