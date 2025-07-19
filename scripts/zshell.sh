@@ -3,7 +3,8 @@
 # zshell - Configures ZSH (custom prompts, etc.)
 #
 
-DOT_FILES_BACKUP_DIR="~/.backup/config"
+DOT_FILES_BACKUP_DIR="$HOME/.config/backup"
+mkdir -p $DOT_FILES_BACKUP_DIR
 
 function backup_file() {
     local label=$1 # What <REQUIRED>
@@ -18,18 +19,17 @@ function backup_file() {
         local item_name=$(basename $path)
         local bu_folder="$DOT_FILES_BACKUP_DIR/$label"
 
-        mkdir -p $DOT_FILES_BACKUP_DIR # Redundant?
         mkdir -p $bu_folder
 
         local target="$bu_folder/$item_name.$bu_dts"
-        spew "'$item' => '$target'"
+        spew "'$path' => '$target'"
 
-        cp $item $target
+        cp $path $target
     fi
 }
 
 function configure_spaceship() {
-    local configuration_path="~/.config/spaceship/spaceship.zsh"
+    local configuration_path="$HOME/.config/spaceship/spaceship.zsh"
 
     if [ -f "$configuration_path" ]; then
         backup_file "spaceship" $configuration_path
@@ -54,7 +54,7 @@ function configure_spaceship() {
 }
 
 function prepare_zshell() {
-    local configuration_path="~/.zshrc"
+    local configuration_path="$HOME/.zshrc"
 
     if [ -f "$configuration_path" ]; then
         backup_file "zsh" $configuration_path
