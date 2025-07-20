@@ -1,0 +1,20 @@
+brew "autoconf"
+brew "autojump"
+brew "bat"
+brew "direnv"
+brew "git"
+brew "gmp"
+brew "libyaml"
+brew "mas"
+brew "mise"
+brew "openssl@3"
+brew "pkgconf"
+brew "rage"
+brew "readline"
+brew "spaceship"
+brew "tree"
+cask "zed"
+
+# Fonts
+# -----
+cask "font-hack-nerd-font"
