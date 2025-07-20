@@ -1,3 +1,5 @@
 # "These dot-files are managed via https://ChezMoi.io"
+path+=("$HOME/bin")
+export PATH
 
 # source /opt/homebrew/opt/spaceship/spaceship.zsh
