@@ -1,0 +1,5 @@
+# DOT-FILES-CONFIG=1
+DOT_FILES_INSTALLED_AT=20250719-185551
+source /opt/homebrew/opt/spaceship/spaceship.zsh
+
+echo "These dot-files are managed via https://ChezMoi.io"
