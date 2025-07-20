@@ -2,4 +2,4 @@
 path+=("$HOME/bin")
 export PATH
 
-# source /opt/homebrew/opt/spaceship/spaceship.zsh
+source /opt/homebrew/opt/spaceship/spaceship.zsh
