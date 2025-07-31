@@ -3,3 +3,5 @@ path+=("$HOME/bin")
 export PATH
 
 source /opt/homebrew/opt/spaceship/spaceship.zsh
+
+eval "$(direnv hook zsh)"
