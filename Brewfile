@@ -16,6 +16,11 @@ brew "rage"
 brew "readline"
 brew "spaceship"
 brew "tree"
+
+# =====
+# Casks
+# =====
+
 cask "zed"
 
 # Fonts
