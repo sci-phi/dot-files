@@ -24,4 +24,23 @@ Then, you can use the `brew bundle` command in conjunction with this `Brewfile` 
 
 ### MISE EN PLACE
 
-TODO: document `mise-en-place` strategy...
+Mise is enabled for ZSH via the eval command added to `~/.zshrc`
+
+#### Ruby
+
+On a macOS system, there is an OLD ruby pre-installed from Apple (v2.6.10 - last patched in 2022) and then another `portable` Ruby installed for Brew's internal use, but which should not be relied upon for your development purposes, as it is subject to change w/o recourse.
+
+`mise install ruby`
+
+Once the install has completed, you can think instruct mise to make it available by default:
+
+`mise use --global ruby@latest`
+
+#### Elixir requires Erlang
+
+Elixir is an oddball here, in that it requires Erlang (with OTP) be available first, which makes it very slightly more complicated to get up and running.
+
+```
+mise install erlang elixir
+mise use --global erlang@latest elixir@latest
+```
