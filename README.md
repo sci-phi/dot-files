@@ -24,6 +24,8 @@ Then, you can use the `brew bundle` command in conjunction with this `Brewfile` 
 
 ### MISE EN PLACE
 
+> [Mise](https://mise.jdx.dev) is a polyglot tool version manager. It replaces tools like asdf, nvm, pyenv, rbenv, etc.
+
 Mise is enabled for ZSH via the eval command added to `~/.zshrc`
 
 #### Ruby
@@ -32,7 +34,7 @@ On a macOS system, there is an OLD ruby pre-installed from Apple (v2.6.10 - last
 
 `mise install ruby`
 
-Once the install has completed, you can think instruct mise to make it available by default:
+This will install the `latest` version of Ruby available. Once the install has completed, you can instruct mise to make the latest Ruby version available by default:
 
 `mise use --global ruby@latest`
 
